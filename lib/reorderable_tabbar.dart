@@ -33,7 +33,7 @@ class _TabStyle extends AnimatedWidget {
   @override
   Widget build(BuildContext context) {
     final ThemeData themeData = Theme.of(context);
-    final TabBarTheme tabBarTheme = TabBarTheme.of(context);
+    final TabBarThemeData tabBarTheme = TabBarTheme.of(context);
     final TabBarTheme defaults = themeData.useMaterial3
         ? _TabsDefaultsM3(context)
         : _TabsDefaultsM2(context);
@@ -566,7 +566,7 @@ class _ReorderableTabBarState extends State<ReorderableTabBar> {
 
   Decoration get _indicator {
     final ThemeData theme = Theme.of(context);
-    final TabBarTheme tabBarTheme = TabBarTheme.of(context);
+    final TabBarThemeData tabBarTheme = TabBarTheme.of(context);
     final TabBarTheme defaults = theme.useMaterial3
         ? _TabsDefaultsM3(context)
         : _TabsDefaultsM2(context);
@@ -905,7 +905,7 @@ class _ReorderableTabBarState extends State<ReorderableTabBar> {
       );
     }
 
-    final TabBarTheme tabBarTheme = TabBarTheme.of(context);
+    final TabBarThemeData tabBarTheme = TabBarTheme.of(context);
 
     final List<Widget> wrappedTabs =
         List<Widget>.generate(widget.tabs.length, (int index) {
